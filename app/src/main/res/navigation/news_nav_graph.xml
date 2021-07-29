@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
+    app:startDestination="@id/newsListing">
+
+    <fragment
+        android:id="@+id/newsListing"
+        android:name="com.bmanchi.naranjaxchallenge.ui.NewsListing"
+        android:label="NewsListing" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_newsListing_to_article"
+            app:destination="@id/article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/article"
+        android:name="com.bmanchi.naranjaxchallenge.ui.ArticleFragment"
+        android:label="Article" />
+</navigation>
